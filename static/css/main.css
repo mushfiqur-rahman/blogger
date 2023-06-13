@@ -1,3 +1,20 @@
-body{
-    background-color: aquamarine;
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.logo{
+    font-family: 'Archivo', sans-serif;
+}
+
+.test{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Merriweather', serif;
+}
+
+html, body{
+    font-family: 'Barlow', sans-serif;
+}
+
+.fw-500{
+    font-weight: 500;
 }
