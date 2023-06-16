@@ -8,27 +8,7 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-12 col-lg-8">
-                {% for post in posts %}
-                    <a href="" class="text-decoration-none infscroll">
-                        <div class="card border-0 pb-3 pb-sm-5">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="card-body p-0">
-                                        <div class="pb-2 text-body infscroll-author">{{ post.author }}</div>
-                                        <h1 class="mb-1 text-body fw-bold">{{ post.title| truncatechars:80 }}</h1>
-                                        <h2 class="text-muted fs-6 d-none d-md-block">{{ post.subtitle }}</h2>
-                                        <div class="text-muted infscroll-date">{{ post.updated_at|date:"M d Y" }}</div>
-                                    </div>
-
-                                </div>
-                                <div class="col-4">
-                                    <img src="https://picsum.photos/205/115.webp" alt="postImage" class="img-fluid float-end">
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                {% endfor %}
-
+                {% include 'components/post-list-elements.html' %}
             </div>
             <div class="d-none d-lg-block col-4">
                 {% include 'footer.html' %}

@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-body{
-    background-color: whitesmoke;
-}
+/*body{*/
+/*    background-color: whitesmoke;*/
+/*}*/
 
 .logo {
     font-family: 'Archivo', sans-serif;
@@ -22,7 +22,7 @@ html, body {
     font-weight: 500;
 }
 
-.infscroll h1 {
+.infscroll-title {
     font-size: 22px;
     letter-spacing: -0.6px;
 }
