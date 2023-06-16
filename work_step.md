@@ -12,32 +12,32 @@
         - production.py
     
         
-2. To run project 
+* To run project 
 
 ```python
 $ (venv) PS blogger>> manage.py runserver
 ```        
 
 
-3. Added condition to manage.py for DEBUG true or false condition
+* Added condition to manage.py for DEBUG true or false condition
 
-4. Secret key generate command
+* Secret key generate command
 
-```python
+```shell
  $ .\manage.py shell
  ```
- ```python
+ ```shell
  >>> from django.core.management.utils import get_random_secret_key
  ```
- ```python
- >>> print(get_random_secret_key())
+ ```shell
+>>> print(get_random_secret_key())
  ```
- ```python
+ ```shell
  >>> exit()
  ```
-5. Install [python-dotenv](https://pypi.org/project/python-dotenv/)
+* Install [python-dotenv](https://pypi.org/project/python-dotenv/)
 
-6. Create .env within the project directory. File stracture 
+* Create .env within the project directory. File stracture 
 
 blogger
 > core
@@ -46,12 +46,12 @@ blogger
 and put the code
 
 ```python
-SECRET_KEY = 
+SECRET_KEY =SECRET_KEY
 
 DEBUG = True
 ``` 
 
-7. Add below line into the base.py file
+* Add below line into the base.py file
 ```python
 from dotenv import load_dotenv
 import os
@@ -59,26 +59,39 @@ import os
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True'
 ```
-8. install [pytest-django](https://pytest-django.readthedocs.io/en/latest/) and create a file at root directory as name 
-```bash
+* install [pytest-django](https://pytest-django.readthedocs.io/en/latest/) and create a file at root directory as name 
+```bash script
 pytest.ini
 ```
-9. To run test use below command
-```bash
+* To run test use below command
+```bash script
 pytest
 ```
-10. Create a new app 
+* Create a new app 
 
-```python
+```python script
  $ (venv) PS D:blogger> ./manage.py startapp blog
 ```
 
-11. install pip pytest cov
+* install pip pytest cov
 
-```bash
+```bash script
 pytest --cov
 ```
-12. 
-```bash
+```shell
  pytest --cov-report html --cov=./
  ```
+* After configure Factory boy
+
+```shell
+(venv) PS D:\PROJECT\djblogger> py manage.py shell
+```
+```shell
+>>> from blog.factory import PostFactory
+```
+```shell
+>>> x = PostFactory.create_batch(200)
+```
+```shell
+>>> exit()
+```
