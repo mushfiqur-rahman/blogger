@@ -1,0 +1,37 @@
+<style>
+    #sm-logo-out{
+        position: relative;
+        background-color: black;
+        width: 38px;
+        height: 38px;
+        top: 50%;
+    }
+
+    #sm-logo-in{
+        position: relative;
+        background-color: white;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        top: 18%;
+        left: 50%;
+    }
+    @media only screen and (max-width: 768px){
+        .container,
+        .container-sm {
+            max-width: 100%;
+        }
+    }
+
+</style>
+
+<nav class="navbar navbar-expand-lg py-1 align-items-start pt-lg-4 sticky-top">
+    <div class="container py-2 px-4 px-lg-0 fixed-top">
+        <a class="navbar-brand m-0" href="/">
+            <div id="sm-logo-out">
+                <div id="sm-logo-in">
+                </div>
+            </div>
+        </a>
+    </div>
+</nav>

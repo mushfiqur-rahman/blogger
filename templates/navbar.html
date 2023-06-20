@@ -1,23 +1,23 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container">
+      <a class="navbar-brand logo fs-4" href="#">djblogger</a>
 
-        <a class="navbar-brand logo fs-3" href="#">blogspot</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-            </ul>
-
-            <form class="d-flex" role="search">
-                <input class="form-control rounded-pill " type="search" placeholder="Search" aria-label="Search">
-
-            </form>
-        </div>
-
+        </ul>
+{#        <form method="get" action="/search/" class="col-12 col-lg-3 mb-lg-0">#}
+        <form method="get" action="/blog/search/" class="col-12 col-lg-3 mb-lg-0">
+            <input type="text" name="q" class="form-control rounded-pill" placeholder="Search..." id="id_q">
+        </form>
+{#      <form class="d-flex" role="search">#}
+{#        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#        <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#      </form>#}
     </div>
+  </div>
 </nav>
