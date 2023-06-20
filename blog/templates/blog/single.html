@@ -5,12 +5,31 @@
 {% endblock %}
 
 {% block content-mid %}
+    <style>
+        .blogger h1 {
+            letter-spacing: -0.6px;
+        }
+
+        .post h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .post p {
+            font-family: Merriweather;
+            font-size: 1.0625rem;
+            line-height: 32px;
+            letter-spacing: 0.2px;
+        }
+    </style>
     <div class="blogger center mx-auto" style="max-width: 683px">
         <div class="text-muted">{{ post.author }}</div>
         <div class="text-muted pb-5">{{ post.updated_at|date:"d, M, Y" }}</div>
         <h1 class="fw-bold pb-2">{{ post.title }}</h1>
-        <h2 class="text-muted fs-4 pb-4">{{ post.subtitle }}</h2>
-        <p class="text-muted fs-5 pb-4">{{ post.content }}</p>
+        <h2 class="text-muted fs-4 pb-2">{{ post.subtitle }}</h2>
+        <div class="post">
+            {{ post.content | markdown | safe }}
+        </div>
     </div>
 {% endblock %}
 
