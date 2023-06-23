@@ -1,8 +1,5 @@
-# djblogger
+# blog
 
-
-
-## Django Project | Building a Blog | HTMX | Bootstrap | Django Framework | 
 
 ## Home
 ![mushfiqfeed](https://github.com/mushfiqur-rahman/blog/assets/26889268/6cbdc915-c9eb-4dc3-a1dd-69f4d160602a)
