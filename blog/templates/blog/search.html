@@ -1,0 +1,25 @@
+{% extends '3-col-template.html' %}
+
+{% block content-left %}
+    {% include 'secondary-navbar.html' %}
+{% endblock %}
+
+{% block content-mid %}
+    <div class="center mx-auto" style="max-width: 683px">
+        <h1 class="fs-1 fw-bold pb-5">
+            {% if posts %}
+                <span class="text-muted">Results for: </span>{{ request.GET.q }}
+            {% else %}
+                <span>Try again</span>
+            {% endif %}
+        </h1>
+        {% include 'components/post-list-elements-search.html' %}
+        {% if not posts %}
+            <div class="col-12">Try searching for something else!</div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block content-right %}
+    {% sidebar_tag_cloud %}
+{% endblock %}

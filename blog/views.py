@@ -50,4 +50,13 @@ class PostSearchView(ListView):
     context_object_name = 'posts'
     form_class = PostSearchForm
 
+    def get_queryset(self):
+        form = self.form_class(self.request.GET)  # grab data from form
+        if form.is_valid():
+            return Post.objects.filter(status__exact='published', title__icontains=form.cleaned_data['q'])
+        return []
 
+    def get_template_names(self):
+        if self.request.htmx:
+            return "components/post-list-elements-search.html"
+        return 'blog/search.html'
