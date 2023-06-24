@@ -1,0 +1,16 @@
+{% extends '3-col-template.html' %}
+
+{% block content-left %}
+    {% include 'secondary-navbar.html' %}
+{% endblock %}
+
+{% block content-mid %}
+    <div class="center mx-auto" style="max-width: 683px">
+        <h1 class="fs-1 fw-bold pb-5">{{ tag|title }}</h1>
+        {% include 'components/post-list-elements-tags.html' %}
+    </div>
+{% endblock %}
+
+{% block content-right %}
+    {% sidebar_tag_cloud %}
+{% endblock %}

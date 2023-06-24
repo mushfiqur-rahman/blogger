@@ -33,4 +33,24 @@
     </div>
 {% endblock %}
 
-{% block content-right %}{% endblock %}
+{% block content-right %}
+    {% sidebar_tag_cloud %}
+    <div class="col-12">
+        <div class="pb-3">More from {{ post.author }}</div>
+        {% for post in related %}
+            <a class="text-decoration-none" href="{{ post.get_absolute_url }}">
+                <div class="card mb-3 border-0 ps-1 color">
+                    <div class="row">
+                        <div class="col-9 pe-2">
+                            <span class="text-dark small">{{ post.author }}</span>
+                            <h1 class="mb-1 fs-6 p-0 text-dark fw-bold">{{ post.title|truncatechars:80 }}</h1>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://picsum.photos/205/115" class="img-fluid float-end" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
