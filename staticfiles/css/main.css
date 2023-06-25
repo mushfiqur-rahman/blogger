@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+/*body{*/
+/*    background-color: whitesmoke;*/
+/*}*/
+
+.logo {
+    font-family: 'Archivo', sans-serif;
+}
+
+.test {
+    font-family: 'Merriweather', serif;
+}
+
+html, body {
+    font-family: 'Barlow', sans-serif;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.infscroll-title {
+    font-size: 22px;
+    letter-spacing: -0.6px;
+}
+
+@media only screen and (max-width: 768px){
+    .infscroll-title {
+    font-size: 0.9375rem;
+    letter-spacing: -0.0px;
+    }
+
+    .infscroll-author,
+    .infscroll-date {
+        font-size: 0.8125rem;
+    }
+}
+
+.color {
+    background-color: transparent;
+}
