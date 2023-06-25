@@ -27,7 +27,7 @@ $ (venv) PS blogger>> manage.py runserver
  $ .\manage.py shell
  ```
  ```shell
- >>> from django.djblog.management.utils import get_random_secret_key
+ >>> from django.core.management.utils import get_random_secret_key
  ```
  ```shell
 >>> print(get_random_secret_key())
