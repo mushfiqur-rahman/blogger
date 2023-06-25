@@ -1,0 +1,17 @@
+services:
+  - name: web
+    env:
+      - key: RAILS_ENV
+        value: production
+    build:
+      env:
+        - key: DJANGO_SETTINGS_MODULE
+          value: "core.settings.production"
+      scripts:
+        - pip install -r requirements.txt
+        - python manage.py collectstatic --noinput
+    routes:
+      - src: /static
+        dest: static
+      - src: /media
+        dest: media
