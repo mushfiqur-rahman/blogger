@@ -1,5 +1,6 @@
 import factory
 from django.contrib.auth.models import User
+
 from blog.models import Post
 
 
@@ -10,6 +11,7 @@ class UserFactory(factory.django.DjangoModelFactory):
     password = "test"
     username = "test"
     is_superuser = True
+    # is_stuff = True
 
 
 class PostFactory(factory.django.DjangoModelFactory):

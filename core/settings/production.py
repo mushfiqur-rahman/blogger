@@ -1,1 +1,1 @@
-from core.settings import *
+from .base import *
