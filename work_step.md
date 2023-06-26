@@ -95,3 +95,10 @@ pytest --cov
 ```shell
 >>> exit()
 ```
+
+____
+## [render](https://render.com/) PostgreSQL setup
+
+```bash script
+> set DATABASE_URL= internal or external database link
+```
