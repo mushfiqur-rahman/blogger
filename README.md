@@ -4,7 +4,9 @@
 
 ***According Render: PostgreSQL Database will delete after 90days***
 
-**User ID**
+#### For Sqlite
+
+**User ID** 
 
 admin or root
 
